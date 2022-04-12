@@ -1,0 +1,32 @@
+<h3>スケジュール新規作成</h3>
+
+<%= form_with model: @post do |f| %>
+<table border="2">
+<tr>
+  <th><%= f.label :title ,"タイトル" %></th>
+  <td><%= f.text_field :title %></td>
+</tr>
+
+
+
+<tr>
+  <th><%= f.label :allday ,"終日" %></th>
+  <td><%= f.check_box :allday ,{checked: true}, "true", "false" %></td>
+</tr>
+
+<tr class = "textarea">
+  <th><%= f.label :contents ,"スケジュールメモ" %></th>
+  <td><%= f.text_area :contents %></td>
+</tr>
+
+</table>
+
+<div>
+<ul>
+  <li><%= f.submit "登録"%></li>
+  <li><%= link_to "一覧に戻る", :posts %></li>
+</ul>
+</div>
+<% end %>
+
+<p><%= link_to "ユーザー新規登録", :new_post %></p>

@@ -1,10 +1,10 @@
 <h3>スケジュール新規作成</h3>
 
 <%= form_with model: @post do |f| %>
-  <table>
+  <table border="2">
     <tr>
-      <th><%= f.label :name ,"タイトル" %></th>
-      <td><%= f.text_field :name %></td>
+      <th><%= f.label :title ,"タイトル" %></th>
+      <td><%= f.text_field :title %></td>
     </tr>
 
     <tr>
@@ -22,9 +22,9 @@
       <td><%= f.check_box :allday ,{checked: true}, "true", "false" %></td>
     </tr>
 
-    <tr>
-      <th><%= f.label :content ,"スケジュールメモ" %></th>
-      <td><%= f.text_area :content %></td>
+    <tr class = "textarea">
+      <th><%= f.label :contents ,"スケジュールメモ" %></th>
+      <td><%= f.text_area :contents %></td>
     </tr>
 
   </table>
