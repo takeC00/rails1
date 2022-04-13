@@ -17,6 +17,7 @@ class PostsController < ApplicationController
     else
       render "new"
     end
+    DateTime = @post
   end
 
   def show

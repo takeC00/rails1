@@ -1,4 +1,4 @@
-<h3>スケジュール新規作成</h3>
+<h3>スケジュール編集</h3>
 
 <%= form_with model: @post do |f| %>
 <table border="2">
@@ -9,13 +9,10 @@
 
 <tr>
   <th><%= f.label :startday ,"開始日" %></th>
-  <td><%= f.date_field :startday %></td>
+  <td><%= @post.startday %></td>
 </tr>
 
-<tr>
-  <th><%= f.label :endday ,"終了日" %></th>
-  <td><%= f.date_field :endday %></td>
-</tr>
+
 
 <tr>
   <th><%= f.label :allday ,"終日" %></th>
@@ -37,4 +34,4 @@
 </div>
 <% end %>
 
-<p><%= link_to "ユーザー新規登録", :new_post %></p>
+<p class="link"><%= link_to "ユーザー新規登録", :new_post %></p>

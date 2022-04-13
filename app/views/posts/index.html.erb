@@ -23,7 +23,7 @@
       <tr>
         <td><%= post.id %></td>
         <td><%= post.title %></td>
-        <td><%= post.startday %></td>
+        <td><%= l post.startday %></td>
         <td><%= post.endday %></td>
         <td><%= post.allday %></td>
         <td><%= post.updated_at %></td>
@@ -40,4 +40,4 @@
     <% end %>
   </tbody>
 </table>
-<p><%= link_to "スケジュール新規作成", :new_post %></P>
+<p class="link"><%= link_to "スケジュール新規作成", :new_post %></P>
