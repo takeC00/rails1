@@ -24,9 +24,9 @@
         <td><%= post.id %></td>
         <td><%= post.title %></td>
         <td><%= l post.startday %></td>
-        <td><%= post.endday %></td>
+        <td><%= l post.endday %></td>
         <td><%= post.allday %></td>
-        <td><%= post.updated_at %></td>
+        <td><%= l post.updated_at %></td>
         <td>
           <%= link_to "確認", post %>
         </td>
@@ -34,7 +34,7 @@
           <%= link_to "編集", [:edit, post] %>
         </td>
         <td>
-          <%= link_to "削除", post %>
+          <%= link_to "削除", post, method: :delete, data:{ confirm:"本当に削除しますか？"} %>
         </td>
       </tr>
     <% end %>

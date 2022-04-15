@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     else
       render "new"
     end
-    DateTime = @post
+    
   end
 
   def show
@@ -39,5 +39,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:notice] = "スケジュールを削除しました"
+    redirect_to :posts
   end
 end

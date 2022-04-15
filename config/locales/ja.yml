@@ -1,4 +1,18 @@
 ja:
+  activerecord:
+    attributes:
+      post:
+        Title: 名前
+        Startday: 開始日
+        Endday: 終了日
+    errors:
+    format: "%{attribute}%{message}"
+    messages:
+      blank: を入力してください
+  date:
+    formats:
+      default: "%Y年%m月%d日"
+
   time:
     formats:
-      default: "%Y年%m月%d日 %時:%分:%秒"
+      default: "%Y年%m月%d日"
