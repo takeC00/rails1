@@ -1,0 +1,52 @@
+header, footer {
+  background-color: rgb(197, 47, 36);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+header a {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+}
+
+
+
+table {
+  text-align: center;
+}
+th,td{
+  padding: 3px 50px;
+}
+td {
+  width: 300px;
+}
+
+th {
+  background-color: rgb(255, 224, 230);
+}
+
+td {
+  background-color: rgb(255, 238, 241);
+}
+
+.notice {
+  background-color: rgb(208, 244, 213);
+  border:1px rgb(0, 255, 72) solid;
+  display: inline-flex;
+  padding: 20px 50px;
+}
+
+.notice-failed { 
+  background-color: rgb(255, 193, 193);
+  border:1px rgb(255, 17, 0) solid;
+  display: inline-flex;
+  padding: 20px 50px;
+}

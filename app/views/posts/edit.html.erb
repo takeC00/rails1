@@ -1,0 +1,47 @@
+<h3>スケジュール編集</h3>
+
+<% if flash[:notice] %>
+  <p class="notice-failed"><%= flash[:notice] %></p>
+<% end %>
+
+<br>
+
+<%= render "shared/error", obj: @post %>
+
+<%= form_with model: @post do |f| %>
+  <table border="2">
+    <tr>
+      <th><%= f.label :title ,"タイトル" %></th>
+      <td><%= f.text_field :title, style: "width:300px"%></td>
+    </tr>
+
+    <tr>
+      <th><%= f.label :startday ,"開始日" %></th>
+      <td><%= f.date_field :startday, style: "width:300px"%></td>
+    </tr>
+
+    <tr>
+      <th><%= f.label :endday ,"終了日" %></th>
+      <td><%= f.date_field :endday, style: "width:300px"%></td>
+    </tr>
+
+    <tr>
+      <th><%= f.label :allday ,"終日" %></th>
+      <td><%= f.check_box :allday, style: "width:300px" %></td>
+    </tr>
+
+    <tr class = "textarea">
+      <th><%= f.label :contents ,"スケジュールメモ" %></th>
+      <td><%= f.text_area :contents, style: "width:300px" %></td>
+    </tr>
+  </table>
+
+  <div>
+    <p><%= f.submit class: 'link' %></p>
+    <ul>
+      <li><%= link_to "スケジュール一覧に戻る", :posts %></li>
+      <li><%= link_to "スケジュール新規登録", :new_post %></p></li>
+    </ul>
+  </div>
+<% end %>
+

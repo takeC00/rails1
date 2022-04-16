@@ -11,6 +11,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1><a href="/posts">スケジュール管理アプリ</a></h1>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>
+        本日の日付: <%= @today%>
+      </p>
+
+      <p class="count">
+        <%= yield(:count) %>
+      </p>
+      
+      
+      
+      
+    </footer>
   </body>
 </html>
