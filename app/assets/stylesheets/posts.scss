@@ -1,4 +1,38 @@
+header, footer {
+  background-color: rgb(197, 47, 36);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+header a {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+}
 
 
 
+table {
+  text-align: center;
+}
+th,td{
+  padding: 3px 50px;
+}
+td {
+  width: 300px;
+}
 
+th {
+  background-color: rgb(255, 224, 230);
+}
+
+td {
+  background-color: rgb(255, 238, 241);
+}

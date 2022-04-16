@@ -18,7 +18,17 @@
       <%= yield %>
     </main>
     <footer>
-      <p><small>&copy; 2022 TakeC</small></p>
+      <p>
+        本日の日付: <%= @today%>
+      </p>
+
+      <p class="count">
+        <%= yield(:count) %>
+      </p>
+      
+      
+      
+      
     </footer>
   </body>
 </html>

@@ -25,7 +25,11 @@
         <td><%= post.title %></td>
         <td><%= l post.startday %></td>
         <td><%= l post.endday %></td>
-        <td><%= post.allday %></td>
+        <td class="allday"><%= if post.allday == true
+                  p "○"
+                else
+                  p ""
+                end%></td>
         <td><%= l post.updated_at %></td>
         <td>
           <%= link_to "確認", post %>
@@ -41,3 +45,9 @@
   </tbody>
 </table>
 <p class="link"><%= link_to "スケジュール新規作成", :new_post %></P>
+
+<%=content_for :count do %>
+  <p>
+    スケジュールの件数:<%= @count%>
+  </p>
+<%end%>

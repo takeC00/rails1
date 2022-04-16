@@ -3,6 +3,9 @@ class PostsController < ApplicationController
     @posts = Post.all
     #テーブルのレコードを全て取得
 
+    @today = Date.current.strftime('%Y年%m月%d日')
+    @count = Post.count
+
   end
 
   def new
@@ -22,10 +25,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @today = Date.current.strftime('%Y年%m月%d日')
   end
 
   def edit
     @post = Post.find(params[:id])
+    @today = Date.current.strftime('%Y年%m月%d日')
   end
 
   def update
@@ -44,4 +49,7 @@ class PostsController < ApplicationController
     flash[:notice] = "スケジュールを削除しました"
     redirect_to :posts
   end
+
+  
+  
 end

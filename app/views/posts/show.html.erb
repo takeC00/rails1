@@ -1,33 +1,43 @@
-<h3>ユーザー詳細</h3>
+<div class= "container">
+  <h3>ユーザー詳細</h3>
 
-<table border="1">
-  <tr>
-    <th>タイトル</th>
-    <td><%= @post.title %></td>
-  </tr>
-  <tr>
-    <th>開始日</th>
-    <td><%= l @post.startday %></td>
-  </tr>
-  <tr>
-    <th>終了日</th>
-    <td><%= l @post.endday %></td>
-  </tr>
-  <tr>
-    <th>終日</th>
-    <td><%= @post.allday %></td>
-  </tr>
-  <tr>
-    <th>スケジュールメモ</th>
-    <td><%= @post.contents %></td>
-  </tr>
+  <table border="1">
+    <tr>
+      <th>タイトル</th>
+      <td><%= @post.title %></td>
+    </tr>
+    <tr>
+      <th>開始日</th>
+      <td><%= l @post.startday %></td>
+    </tr>
+    <tr>
+      <th>終了日</th>
+      <td><%= l @post.endday %></td>
+    </tr>
+    <tr>
+      <th>終日</th>
+      <td class="allday">
+          <%=
+            if @post.allday == true
+              p "○"
+            else
+              p ""
+            end
+          %>
+        </td>
+    </tr>
+    <tr>
+      <th>スケジュールメモ</th>
+      <td><%= @post.contents %></td>
+    </tr>
 
-</table>
+  </table>
+</div>
 
 <div>
   <ul>
     <li class="link"><%= link_to "スケジュール一覧に戻る", :posts %></li>
-    <li class="link"><%= link_to "編集", [:edit, @post] %></li>
-    <li class="link"><%= link_to "削除", :post, method: :delete, data:{ confirm:"本当に削除しますか？"}%></li>
+    <li class="link"><%= link_to "スケジュール編集", [:edit, @post] %></li>
+    <li class="link"><%= link_to "スケジュール削除", :post, method: :delete, data:{ confirm:"本当に削除しますか？"}%></li>
   </ul>
 </div>
